@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+AI Student Career Navigator
+</title>
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="container">
+
+
+<div class="glass-card">
+
+
+
+<div class="logo">
+🤖
+</div>
+
+
+
+<h1>
+AI Student Career Navigator
+</h1>
+
+
+
+<p class="subtitle">
+
+Discover your ideal career path using Artificial Intelligence
+
+</p>
+
+
+
+
+
+<form action="/predict" method="POST">
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+📐 Mathematics Skill
+</label>
+
+
+<input
+
+type="range"
+
+name="math"
+
+min="1"
+
+max="5"
+
+value="3"
+
+oninput="mathOutput.value=value"
+
+>
+
+
+<output id="mathOutput">
+3
+</output>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+💻 Programming / Coding Skill
+</label>
+
+
+<input
+
+type="range"
+
+name="coding"
+
+min="1"
+
+max="5"
+
+value="3"
+
+oninput="codingOutput.value=value"
+
+>
+
+
+<output id="codingOutput">
+3
+</output>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+🎨 Creativity Skill
+</label>
+
+
+<input
+
+type="range"
+
+name="creativity"
+
+min="1"
+
+max="5"
+
+value="3"
+
+oninput="creativeOutput.value=value"
+
+>
+
+
+<output id="creativeOutput">
+3
+</output>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+🗣 Communication Skill
+</label>
+
+
+<input
+
+type="range"
+
+name="communication"
+
+min="1"
+
+max="5"
+
+value="3"
+
+oninput="communicationOutput.value=value"
+
+>
+
+
+<output id="communicationOutput">
+3
+</output>
+
+
+</div>
+
+
+
+
+
+
+<button type="submit">
+
+🚀 Analyze My Career
+
+</button>
+
+
+
+</form>
+
+
+
+
+
+
+
+
+<div class="features">
+
+
+
+
+
+<a href="/skill-analysis" class="feature-box">
+
+
+<div>
+
+
+<h2>
+📊
+</h2>
+
+
+<h3>
+Skill Analysis
+</h3>
+
+
+<p>
+Analyze your strengths
+</p>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+
+<a href="/prediction" class="feature-box">
+
+
+<div>
+
+
+<h2>
+🧠
+</h2>
+
+
+<h3>
+ML Prediction
+</h3>
+
+
+<p>
+View AI prediction
+</p>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+
+
+
+<a href="/dashboard" class="feature-box">
+
+
+<div>
+
+
+<h2>
+🎯
+</h2>
+
+
+<h3>
+Career Match
+</h3>
+
+
+<p>
+Explore career dashboard
+</p>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+</body>
+
+
+</html>

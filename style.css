@@ -1,0 +1,990 @@
+/* ==========================
+   GLOBAL
+========================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+}
+
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #1d4ed8
+    );
+
+    color:white;
+
+}
+
+
+
+
+
+a{
+
+    text-decoration:none;
+
+    color:white;
+
+}
+
+
+
+
+/* ==========================
+   CONTAINERS
+========================== */
+
+
+.container{
+
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+
+}
+
+
+
+
+.dashboard-container{
+
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:40px 20px;
+
+
+}
+
+
+
+
+
+/* ==========================
+   GLASS CARDS
+========================== */
+
+
+.glass-card{
+
+
+    background:
+
+    rgba(255,255,255,0.12);
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+
+    border-radius:25px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.2);
+
+
+
+    padding:40px;
+
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,0.35);
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+/* ==========================
+   HEADINGS
+========================== */
+
+
+h1{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+h2{
+
+    margin-bottom:20px;
+
+}
+
+
+
+p{
+
+    color:#dbeafe;
+
+    line-height:1.6;
+
+}
+
+
+
+
+.logo{
+
+    text-align:center;
+
+    font-size:65px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+.subtitle{
+
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+/* ==========================
+   INPUT SECTION
+========================== */
+
+
+.input-group{
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.input-group label{
+
+
+    display:block;
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+input[type="range"]{
+
+
+    width:100%;
+
+
+    height:8px;
+
+
+    cursor:pointer;
+
+
+    accent-color:#38bdf8;
+
+
+}
+
+
+
+
+output{
+
+
+    display:inline-block;
+
+
+    margin-top:10px;
+
+
+    background:#2563eb;
+
+
+    padding:5px 18px;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+
+button{
+
+
+    width:100%;
+
+
+    padding:16px;
+
+
+    border:none;
+
+
+    border-radius:15px;
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #22c55e,
+        #06b6d4
+    );
+
+
+    color:white;
+
+
+    font-size:18px;
+
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+button:hover{
+
+
+    transform:translateY(-5px);
+
+
+    box-shadow:
+
+    0 15px 30px rgba(0,0,0,.4);
+
+
+}
+
+
+
+
+.back-btn{
+
+
+    display:block;
+
+
+    width:230px;
+
+
+    margin:30px auto;
+
+
+    padding:15px;
+
+
+    text-align:center;
+
+
+    background:#2563eb;
+
+
+    border-radius:15px;
+
+
+    font-weight:bold;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.back-btn:hover{
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   FEATURE CARDS
+========================== */
+
+
+.features{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:25px;
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+
+
+.feature-box{
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    text-align:center;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.feature-box:hover{
+
+
+    background:
+
+    rgba(255,255,255,.25);
+
+
+    transform:
+
+    translateY(-8px);
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+
+.dashboard-header{
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.result-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:25px;
+
+
+}
+
+
+
+.result-card{
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.result-card h2{
+
+
+    color:#38bdf8;
+
+
+    font-size:35px;
+
+
+}
+
+
+
+
+
+
+.charts-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:30px;
+
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+.chart-card{
+
+
+    background:white;
+
+
+    color:#111;
+
+
+    padding:25px;
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+
+
+
+/* ==========================
+   INSIGHTS
+========================== */
+
+
+.insights{
+
+
+    margin-top:30px;
+
+
+}
+
+
+
+.insight-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:20px;
+
+
+}
+
+
+
+.insight-grid div{
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+    padding:20px;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+/* ==========================
+   ROADMAP
+========================== */
+
+
+.roadmap{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:20px;
+
+
+}
+
+
+
+.roadmap div{
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+.roadmap span{
+
+
+    background:#2563eb;
+
+
+    padding:8px 15px;
+
+
+    border-radius:50px;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   SKILL ANALYSIS
+========================== */
+
+
+.analysis-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+.analysis-card{
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+.progress-item{
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+.progress{
+
+
+    height:12px;
+
+
+    background:#334155;
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.progress-bar{
+
+
+    height:100%;
+
+
+    background:
+
+
+    linear-gradient(
+        90deg,
+        #22c55e,
+        #38bdf8
+    );
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   PREDICTION PAGE
+========================== */
+
+
+.prediction-box{
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    padding:40px;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.career-result{
+
+
+    font-size:45px;
+
+
+    color:#38bdf8;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+.confidence{
+
+
+    font-size:22px;
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+
+
+.prediction-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+.prediction-card{
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+.prediction-card li{
+
+
+    margin:15px;
+
+
+}
+
+
+
+
+
+
+.action-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:20px;
+
+
+}
+
+
+
+.action-grid div{
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+    padding:20px;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+
+@media(max-width:900px){
+
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+
+
+    .features,
+    .result-grid,
+    .charts-grid,
+    .roadmap,
+    .analysis-grid,
+    .prediction-grid,
+    .action-grid,
+    .insight-grid{
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+    }
+
+
+
+    .glass-card{
+
+
+        padding:25px;
+
+
+    }
+
+
+
+}

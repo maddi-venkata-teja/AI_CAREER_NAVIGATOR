@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<title>
+AI Career Dashboard
+</title>
+
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="dashboard-container">
+
+
+
+
+
+<!-- HEADER -->
+
+
+<div class="glass-card dashboard-header">
+
+
+<div class="logo">
+🚀
+</div>
+
+
+<h1>
+AI Career Intelligence Dashboard
+</h1>
+
+
+<p>
+Your personalized career recommendation powered by Machine Learning
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- RESULT CARDS -->
+
+
+<div class="result-grid">
+
+
+
+
+
+<div class="result-card">
+
+
+<h3>
+🎯 Recommended Career
+</h3>
+
+
+<h2>
+{{career}}
+</h2>
+
+
+<p>
+Best matched career based on your skills
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="result-card">
+
+
+<h3>
+🤖 AI Confidence Score
+</h3>
+
+
+<h2>
+{{confidence}}%
+</h2>
+
+
+<p>
+Prediction confidence level
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- CHARTS -->
+
+
+<div class="charts-grid">
+
+
+
+
+
+<div class="chart-card">
+
+
+<h2>
+📊 Career Skill Comparison
+</h2>
+
+
+<div id="careerChart"></div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="chart-card">
+
+
+<h2>
+🧠 Your Skill Distribution
+</h2>
+
+
+<div id="skillChart"></div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- AI INSIGHTS -->
+
+
+<div class="glass-card insights">
+
+
+
+<h2>
+💡 AI Career Insights
+</h2>
+
+
+
+<div class="insight-grid">
+
+
+
+
+
+<div>
+
+<h3>
+Technical Skills
+</h3>
+
+<p>
+Focus on programming, algorithms and AI tools.
+</p>
+
+</div>
+
+
+
+
+
+<div>
+
+<h3>
+Career Growth
+</h3>
+
+<p>
+Build projects and improve practical experience.
+</p>
+
+</div>
+
+
+
+
+
+<div>
+
+<h3>
+Next Step
+</h3>
+
+<p>
+Create a portfolio and prepare for interviews.
+</p>
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ROADMAP -->
+
+
+<div class="glass-card roadmap-card">
+
+
+<h2>
+📚 Recommended Learning Roadmap
+</h2>
+
+
+
+
+<div class="roadmap">
+
+
+
+
+
+<div>
+
+<span>
+01
+</span>
+
+<h3>
+Programming
+</h3>
+
+<p>
+Python / Java / Data Structures
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+<span>
+02
+</span>
+
+<h3>
+Machine Learning
+</h3>
+
+<p>
+ML algorithms and model building
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+<span>
+03
+</span>
+
+<h3>
+Projects
+</h3>
+
+<p>
+Build AI applications
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+<span>
+04
+</span>
+
+<h3>
+Placement
+</h3>
+
+<p>
+Resume + Interview preparation
+</p>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<a href="/" class="back-btn">
+
+⬅ Analyze Again
+
+</a>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+let careerChart = {{career_chart | safe}};
+
+
+let skillChart = {{skill_chart | safe}};
+
+
+
+
+Plotly.newPlot(
+
+"careerChart",
+
+careerChart.data,
+
+careerChart.layout,
+
+{
+responsive:true
+}
+
+);
+
+
+
+
+
+
+Plotly.newPlot(
+
+"skillChart",
+
+skillChart.data,
+
+skillChart.layout,
+
+{
+responsive:true
+}
+
+);
+
+
+
+
+</script>
+
+
+
+</body>
+
+
+</html>
